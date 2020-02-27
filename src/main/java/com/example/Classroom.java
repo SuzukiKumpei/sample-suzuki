@@ -5,11 +5,7 @@ public class Classroom {
 	private String name;
 	private Integer floor;
 	private String homeRoomTeacherName;
-
-	@Override
-	public String toString() {
-		return "Classroom [name=" + name + ", floor=" + floor + ", homeRoomTeacherName=" + homeRoomTeacherName + "]";
-	}
+	private String grade;
 
 	public String getName() {
 		return name;
@@ -18,14 +14,32 @@ public class Classroom {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public Classroom() {
+
+	public String getGrade() {
+		return grade;
 	}
 
-	public Classroom(String name, String homeRoomTeacherName) {
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Classroom [name=" + name + ", floor=" + floor + ", homeRoomTeacherName=" + homeRoomTeacherName
+				+ ", grade=" + grade + "]";
+	}
+
+	
+	public Classroom(String name, Integer floor, String homeRoomTeacherName, String grade) {
 		super();
 		this.name = name;
+		this.floor = floor;
 		this.homeRoomTeacherName = homeRoomTeacherName;
+		this.grade = grade;
+	}
+
+	public Classroom() {
 	}
 
 	public String getHomeRoomTeacherName() {
